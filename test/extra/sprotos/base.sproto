@@ -1,0 +1,10 @@
+.Status {
+    status 0 : integer
+    msg 1 : string
+}
+
+.BasePackage {
+	type 0 : integer
+	session 1 : integer
+    ud 2 : Status
+}

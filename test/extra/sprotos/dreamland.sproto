@@ -1,0 +1,31 @@
+.DreamlandInfo {
+    bid 0: integer 
+    score 1: integer 
+    time 2: integer 
+    first 3: boolean 
+}
+
+get_dreamland_info 61 {
+    request {
+        id 0: integer 
+    }
+    response {
+        count 0: integer
+        infos 1: *DreamlandInfo
+    }
+}
+
+get_dreamland_info2 65 {
+    request {
+    }
+    response {
+        count 0: integer
+        infos 1: *DreamlandInfo
+    }
+}
+
+notify 66 {
+    request {
+        info 0 : integer
+    }
+}

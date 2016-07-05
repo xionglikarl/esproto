@@ -1,0 +1,24 @@
+{application, esproto,
+ [
+  {description,
+   "erlang binding for sproto"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {modules,
+   [
+    sproto,
+    sprotodump,
+    sprotoparse,
+    froms
+   ]},
+  {applications,
+   [
+    kernel,
+    stdlib
+   ]},
+  {maintainers,
+   [
+    "xionglikarl"
+   ]},
+  {licenses, ["MIT"]},
+   {links, [{"Github", "https://github.com/xionglikarl/esproto"}]}]}.

@@ -1,0 +1,54 @@
+.Person {
+	name 0 : string
+	id 1 : integer
+	email 2 : string
+
+	.PhoneNumber {
+		.Test {
+			aa 0 : string
+		}
+		number 0 : Test
+		type 1 : integer
+	}
+
+	phone 3 : *Person.PhoneNumber
+}
+
+
+.AddressBook {
+	person 0 : *Person(id)
+	others 1 : *Person
+}
+
+.Foo {
+}
+
+foo 2 {
+	request {
+
+	}
+	response {
+		errcode 0 : integer
+	}
+}
+
+foobar 1 {	# define a new protocol (for RPC used) with tag 1
+    request Person	# Associate the type Person with foobar.request
+    response {	# define the foobar.response type
+        ok 0 : boolean
+    }
+}
+
+.Person1 {
+    name 0 : string
+    age 1 : integer
+    marital 2 : boolean
+    children 3 : *Person1
+}
+
+.Data {
+	numbers 0 : *integer
+	bools 1 : *boolean
+	number 2 : integer
+	bignumber 3 : integer
+}
